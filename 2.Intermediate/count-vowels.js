@@ -25,7 +25,23 @@
 // - Or use filter() with split()
 
 function countVowels(str) {
-    // Your code here
+    // Convert the string to lowercase to handle both uppercase and lowercase vowels
+    str = str.toLowerCase();
+    
+    // Define a set of vowels for easy lookup
+    const vowels = 'aeiou';
+    
+    // Initialize a count variable
+    let count = 0;
+    
+    // Loop through each character in the string
+    for (let char of str) {
+        if (vowels.includes(char)) {
+            count++;
+        }
+    }
+    
+    return count;
 }
 
 // Test Cases
